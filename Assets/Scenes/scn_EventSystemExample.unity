@@ -169,9 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_QuestList:
   - m_SideQuest: 00
-  - m_SideQuest: 000000
   - m_SideQuest: 0000
-  - m_SideQuest: 00
 --- !u!1 &271583611
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class QuestManager : MonoBehaviour
         [SerializeField] private bool[] m_SideQuest;
     }
 
-    [SerializeField] private List<Quest> m_QuestList;
+    [SerializeField] private Quest[] m_QuestList;
     // Start is called before the first frame update
 
     /// <summary>
