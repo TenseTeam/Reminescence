@@ -19,7 +19,6 @@ public class QuestManager : MonoBehaviour
     private void Start()
     {
         GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, UpdateQuest);
-        GameManager.instance.EventManager.Register(Constants.EVENT_CHECK_QUEST, CheckQuest);
         GameManager.instance.EventManager.Register(Constants.EVENT_CHECK_SIDE_QUEST, CheckSideQuest);
     }
 
@@ -34,6 +33,8 @@ public class QuestManager : MonoBehaviour
             UpdateSideQuest(parameters);
         else
             m_QuestList[(int)parameters[1]].m_SideQuest[0] = true;
+
+        CheckQuest();
     }
 
     /// <summary>
@@ -58,10 +59,9 @@ public class QuestManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if the main quest is completed and if it is go to next scene, is needed index of the next scene
+    /// Check if the main quest is completed and if it is unlock door
     /// </summary>
-    /// <param name="parameters"></param>
-    public void CheckQuest(object[] parameters)
+    public void CheckQuest()
     {
         bool checkVerified = true;
         foreach (Quest quest in m_QuestList)
@@ -80,7 +80,7 @@ public class QuestManager : MonoBehaviour
         }
 
         if (checkVerified)
-            GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_CHANGE_SCENE, (int)parameters[0]);
+            GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_UNLOCK_DOOR);
     }
 
     /// <summary>

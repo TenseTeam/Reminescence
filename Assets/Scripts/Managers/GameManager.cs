@@ -5,13 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private int m_NextLevel;
-
     private UIManager m_UIManager;
     public UIManager UIManager { get => m_UIManager;}
-
-    private QuestManager m_QuestManager;
-    public QuestManager QuestManager { get => m_QuestManager;}
 
     private EventManager m_EventManager;
     public EventManager EventManager { get => m_EventManager;}
@@ -21,7 +16,6 @@ public class GameManager : Singleton<GameManager>
     void OnEnable()
     {
         m_UIManager = GetComponentInChildren<UIManager>();
-        m_QuestManager = GetComponentInChildren<QuestManager>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 
