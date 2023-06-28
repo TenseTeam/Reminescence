@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
+    private UIManager m_UIManager;
+    public UIManager UIManager { get => m_UIManager;}
+
+    private EventManager m_EventManager;
+    public EventManager EventManager { get => m_EventManager;}
+
+
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        m_UIManager = GetComponentInChildren<UIManager>();
+        m_EventManager = Factory.CreateEvenetManager();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        instance.EventManager.Register(Constants.EVENT_CHANGE_SCENE, LevelCompleted);
+    }
+
+    public void LevelCompleted(object[] parameters)
+    {
+        SceneManager.LoadScene((int)parameters[0]);
     }
 }
