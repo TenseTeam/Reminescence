@@ -22,12 +22,20 @@ public class MovementComponent : MonoBehaviour
 
     public void Move(float vertical, float horizontal)
     {
-        rb.velocity = (Vector2.up * Input.GetAxis("Vertical") + Vector2.right * Input.GetAxis("Horizontal")) * (m_MovementSpeed * 100) * Time.deltaTime;
+        rb.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 10) * Time.deltaTime;
 
-        if (Mathf.Abs(rb.velocity.x) > 0.001f || Mathf.Abs(rb.velocity.y) > 0.001f)
-            anim.SetBool("isMoving", true);
+        if (Mathf.Abs(rb.velocity.x) > 0.001f)
+            anim.SetBool("isMovingRL", true);
+        else if (rb.velocity.y > 0.001f)
+            anim.SetBool("isMovingUp", true);
+        else if (rb.velocity.y < 0.001f)
+            anim.SetBool("isMovingDown", true);
         else
-            anim.SetBool("isMoving", false);
+        {
+            anim.SetBool("isMovingRL", false);
+            anim.SetBool("isMovingUp", false);
+            anim.SetBool("isMovingDown", false);
+        }
 
 
         sprite.flipX = rb.velocity.x < 0;
