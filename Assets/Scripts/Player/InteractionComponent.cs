@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class InteractionComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Interact(ItemBaseData item, int questIndex)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //start interaction events chain
+        GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_INTERACTION, item, questIndex);
     }
 }

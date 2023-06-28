@@ -24,6 +24,10 @@ public class GameManager : Singleton<GameManager>
         instance.EventManager.Register(Constants.EVENT_CHANGE_SCENE, LevelCompleted);
     }
 
+    /// <summary>
+    /// change scene with the index in parameters at position 1 (see class diagram)
+    /// </summary>
+    /// <param name="parameters"></param>
     public void LevelCompleted(object[] parameters)
     {
         SceneManager.LoadScene((int)parameters[0]);

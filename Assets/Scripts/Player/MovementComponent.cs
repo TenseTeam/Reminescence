@@ -20,6 +20,11 @@ public class MovementComponent : MonoBehaviour
         m_Sprite = GetComponent<SpriteRenderer>();
     }
 
+    /// <summary>
+    /// top-down movement method
+    /// </summary>
+    /// <param name="vertical"></param>
+    /// <param name="horizontal"></param>
     public void Move(float vertical, float horizontal)
     {
         m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
@@ -29,6 +34,9 @@ public class MovementComponent : MonoBehaviour
         m_Sprite.flipX = m_RigidBody.velocity.x < 0;
     }
 
+    /// <summary>
+    /// manage animation for to right/left, up and down
+    /// </summary>
     private void ManageAnimation()
     {
         if (Mathf.Abs(m_RigidBody.velocity.x) > 0.001f)

@@ -13,6 +13,10 @@ public class DoorController : MonoBehaviour
         GameManager.instance.EventManager.Register(Constants.EVENT_UNLOCK_DOOR, ThroughDoor);
     }
 
+    /// <summary>
+    /// makes gameObject throughable
+    /// </summary>
+    /// <param name="parameters"></param>
     public void ThroughDoor(object[] parameters)
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
@@ -21,6 +25,10 @@ public class DoorController : MonoBehaviour
         Destroy(renderer);
     }
 
+    /// <summary>
+    /// check if player is over the door, if it is start event of end of level
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_END_LEVEL, m_NextScene);
