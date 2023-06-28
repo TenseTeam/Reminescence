@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate() 
     {
         m_Movement.Move(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
     }

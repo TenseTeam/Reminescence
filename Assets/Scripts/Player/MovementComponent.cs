@@ -8,36 +8,36 @@ using UnityEngine;
 public class MovementComponent : MonoBehaviour
 {
     [SerializeField] private float m_MovementSpeed = 0f;
-    private Rigidbody2D rb;
-    private SpriteRenderer sprite;
-    private Animator anim;
+    private Rigidbody2D m_RigidBody;
+    private SpriteRenderer m_Sprite;
+    private Animator m_Animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        m_RigidBody = GetComponent<Rigidbody2D>();
+        m_Animator = GetComponent<Animator>();
+        m_Sprite = GetComponent<SpriteRenderer>();
     }
 
     public void Move(float vertical, float horizontal)
     {
-        rb.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 10) * Time.deltaTime;
+        m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
-        if (Mathf.Abs(rb.velocity.x) > 0.001f)
-            anim.SetBool("isMovingRL", true);
-        else if (rb.velocity.y > 0.001f)
-            anim.SetBool("isMovingUp", true);
-        else if (rb.velocity.y < 0.001f)
-            anim.SetBool("isMovingDown", true);
+        if (Mathf.Abs(m_RigidBody.velocity.x) > 0.001f)
+            m_Animator.SetBool("isMovingRL", true);
+        else if (m_RigidBody.velocity.y > 0.001f)
+            m_Animator.SetBool("isMovingUp", true);
+        else if (m_RigidBody.velocity.y < 0.001f)
+            m_Animator.SetBool("isMovingDown", true);
         else
         {
-            anim.SetBool("isMovingRL", false);
-            anim.SetBool("isMovingUp", false);
-            anim.SetBool("isMovingDown", false);
+            m_Animator.SetBool("isMovingRL", false);
+            m_Animator.SetBool("isMovingUp", false);
+            m_Animator.SetBool("isMovingDown", false);
         }
 
 
-        sprite.flipX = rb.velocity.x < 0;
+        m_Sprite.flipX = m_RigidBody.velocity.x < 0;
     }
 }
