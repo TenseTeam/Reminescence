@@ -24,20 +24,36 @@ public class MovementComponent : MonoBehaviour
     {
         m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
+        ManageAnimation();
+
+        m_Sprite.flipX = m_RigidBody.velocity.x < 0;
+    }
+
+    private void ManageAnimation()
+    {
         if (Mathf.Abs(m_RigidBody.velocity.x) > 0.001f)
+        {
             m_Animator.SetBool("isMovingRL", true);
+            m_Animator.SetBool("isMovingUp", false);
+            m_Animator.SetBool("isMovingDown", false);
+        }
         else if (m_RigidBody.velocity.y > 0.001f)
+        {
             m_Animator.SetBool("isMovingUp", true);
-        else if (m_RigidBody.velocity.y < 0.001f)
+            m_Animator.SetBool("isMovingRL", false);
+            m_Animator.SetBool("isMovingDown", false);
+        }
+        else if (m_RigidBody.velocity.y < -0.001f)
+        {
             m_Animator.SetBool("isMovingDown", true);
+            m_Animator.SetBool("isMovingUp", false);
+            m_Animator.SetBool("isMovingRL", false);
+        }
         else
         {
             m_Animator.SetBool("isMovingRL", false);
             m_Animator.SetBool("isMovingUp", false);
             m_Animator.SetBool("isMovingDown", false);
         }
-
-
-        m_Sprite.flipX = m_RigidBody.velocity.x < 0;
     }
 }
