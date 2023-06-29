@@ -30,8 +30,6 @@ public class MovementComponent : MonoBehaviour
         m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
         ManageAnimation();
-
-        m_Sprite.flipX = m_RigidBody.velocity.x < 0;
     }
 
     /// <summary>
@@ -39,27 +37,38 @@ public class MovementComponent : MonoBehaviour
     /// </summary>
     private void ManageAnimation()
     {
-        if (Mathf.Abs(m_RigidBody.velocity.x) > 0.001f)
+        if (m_RigidBody.velocity.x > 0.001f)
         {
-            m_Animator.SetBool("isMovingRL", true);
+            m_Animator.SetBool("isMovingRight", true);
+            m_Animator.SetBool("isMovingLeft", false);
+            m_Animator.SetBool("isMovingUp", false);
+            m_Animator.SetBool("isMovingDown", false);
+        }
+        else if (m_RigidBody.velocity.x < -0.001f)
+        {
+            m_Animator.SetBool("isMovingLeft", true);
+            m_Animator.SetBool("isMovingRight", false);
             m_Animator.SetBool("isMovingUp", false);
             m_Animator.SetBool("isMovingDown", false);
         }
         else if (m_RigidBody.velocity.y > 0.001f)
         {
             m_Animator.SetBool("isMovingUp", true);
-            m_Animator.SetBool("isMovingRL", false);
+            m_Animator.SetBool("isMovingLeft", false);
+            m_Animator.SetBool("isMovingRight", false);
             m_Animator.SetBool("isMovingDown", false);
         }
         else if (m_RigidBody.velocity.y < -0.001f)
         {
             m_Animator.SetBool("isMovingDown", true);
             m_Animator.SetBool("isMovingUp", false);
-            m_Animator.SetBool("isMovingRL", false);
+            m_Animator.SetBool("isMovingLeft", false);
+            m_Animator.SetBool("isMovingRight", false);
         }
         else
         {
-            m_Animator.SetBool("isMovingRL", false);
+            m_Animator.SetBool("isMovingLeft", false);
+            m_Animator.SetBool("isMovingRight", false);
             m_Animator.SetBool("isMovingUp", false);
             m_Animator.SetBool("isMovingDown", false);
         }
