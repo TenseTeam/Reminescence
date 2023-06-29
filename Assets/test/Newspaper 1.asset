@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   AudioSFX: {fileID: 0}
-  UiImage: {fileID: 0}
+  UiImage: {fileID: 21300000, guid: dc0306a4f3ca02c41896a69b889cfa05, type: 3}
   Description: giornale del 12/3/43

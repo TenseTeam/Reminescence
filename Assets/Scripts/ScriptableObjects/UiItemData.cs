@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item/UI Item")]
 public class UiItemData : ItemBaseData
 {
-    public Texture UiImage;
+    public Sprite UiImage;
 }

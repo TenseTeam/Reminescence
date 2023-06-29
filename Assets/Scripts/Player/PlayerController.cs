@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour, IPlayer
         m_Interaction = GetComponent<InteractionComponent>();
     }
 
+    private void Update()
+    {
+        
+    }
+
     // Update is called once per frame
     void FixedUpdate() 
     {

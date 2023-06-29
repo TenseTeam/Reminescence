@@ -46,7 +46,7 @@ public class QuestManager : MonoBehaviour
         //is need the index of the quest list, it is incapsulated in "parameters" at position 1 (see attached class diagram)
         bool founded = false;
         int i = 0;
-        while (!founded || i < m_QuestList[(int)parameters[1]].m_SideQuest.Length)
+        while (founded != i < m_QuestList[(int)parameters[1]].m_SideQuest.Length)
         {
             if(m_QuestList[(int)parameters[1]].m_SideQuest[i] == false)
             {

@@ -67,6 +67,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
             {
                 Interact(interaction);
                 m_IsInteractable = false;
+                HighLight(false);
                 //GameManager.instance.UIManager.InteractUIDisable();
             }
         }
@@ -80,9 +81,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
     {
         if (other.TryGetComponent(out IPlayer player))
         {
-            m_InRange = false;
             if (m_IsInteractable)
+            {
+                m_InRange = false;
                 HighLight(false);
+            }
             //GameManager.instance.UIManager.InteractUIDisable();
         }
     }
