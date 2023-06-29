@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class InteractableItem : MonoBehaviour, IInteractable
 {
     [SerializeField] private ItemBaseData m_Item;
@@ -12,8 +14,31 @@ public class InteractableItem : MonoBehaviour, IInteractable
 
     private bool m_IsInteractable = true;
     private GameObject m_Highlight;
+    private InteractionComponent m_PlayerInteraction; 
 
-    private bool m_InRange;
+    private bool m_InRange = false;
+
+    private void Start()
+    {
+        GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
+        GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+    }
+
+    private void Update()
+    {
+        //interaction between item and player
+        if (m_PlayerInteraction != null)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && m_InRange)
+            {
+                Interact(m_PlayerInteraction);
+                m_IsInteractable = false;
+                HighLight(false);
+                m_PlayerInteraction = null;
+            }
+        }
+    }
 
     /// <summary>
     /// Method used for call player interaction giving item information 
@@ -47,29 +72,12 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// <param name="other"></param>
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IPlayer player))
+        if (other.TryGetComponent(out InteractionComponent player) && m_IsInteractable)
         {
             m_InRange = true;
             HighLight(true);
+            m_PlayerInteraction = player;
             //GameManager.instance.UIManager.InteractUIEnable();
-        }
-    }
-
-    /// <summary>
-    /// interaction between item and player
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.TryGetComponent(out InteractionComponent interaction))
-        {
-            if (Input.GetKeyDown(KeyCode.E) && m_InRange)
-            {
-                Interact(interaction);
-                m_IsInteractable = false;
-                HighLight(false);
-                //GameManager.instance.UIManager.InteractUIDisable();
-            }
         }
     }
 
@@ -79,12 +87,13 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// <param name="other"></param>
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.TryGetComponent(out IPlayer player))
+        if (other.TryGetComponent(out IPlayer player) && m_IsInteractable)
         {
             if (m_IsInteractable)
             {
                 m_InRange = false;
                 HighLight(false);
+                m_PlayerInteraction = null;
             }
             //GameManager.instance.UIManager.InteractUIDisable();
         }
