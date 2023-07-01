@@ -12,12 +12,12 @@ public class DialogueManager : MonoBehaviour {
 	[SerializeField] private List<Dialogue> m_DialogueList;
 
 	private Dialogue m_ActualDialogue;
-	private Queue<string> m_CurrentText;
+	private List<string> m_CurrentText;
 	private int m_CurrentMonologueIndex;
 
 	// Use this for initialization
 	void Start () {
-		m_CurrentText = new Queue<string>();
+		m_CurrentText = new List<string>();
 	}
 
 	public void StartDialogue(int indexDialogue)
@@ -35,9 +35,11 @@ public class DialogueManager : MonoBehaviour {
 
 		m_CurrentText.Clear();
 
+		m_CurrentText.Add(null);
+
 		foreach (string sentence in m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].sentences)
 		{
-			m_CurrentText.Enqueue(sentence);
+			m_CurrentText.Add(sentence);
         }
 
 		DisplayNextSentence();
@@ -45,7 +47,8 @@ public class DialogueManager : MonoBehaviour {
 
 	public void DisplayNextSentence ()
 	{
-		if (m_CurrentText.Count == 0)
+        m_CurrentText.RemoveAt(0);
+        if (m_CurrentText.Count == 0)
 		{
 			if (m_CurrentMonologueIndex < m_ActualDialogue.DialogueParts.Length - 1)
 			{
@@ -59,10 +62,10 @@ public class DialogueManager : MonoBehaviour {
 			}
 		}
 
-		string sentence = m_CurrentText.Dequeue();
+		string sentence = m_CurrentText[0];
 		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));
-	}
+    }
 
 	IEnumerator TypeSentence (string sentence)
 	{
