@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UiItemData : MonoBehaviour
+[CreateAssetMenu(menuName = "Item/UI Item")]
+public class UiItemData : ItemBaseData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Sprite UiImage;
 }
