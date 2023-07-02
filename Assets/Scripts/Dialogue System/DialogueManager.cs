@@ -20,6 +20,10 @@ public class DialogueManager : MonoBehaviour {
 		m_CurrentText = new List<string>();
 	}
 
+	/// <summary>
+	/// Method used for starting a specified dialogue, need an index based on the dialogue list
+	/// </summary>
+	/// <param name="indexDialogue"></param>
 	public void StartDialogue(int indexDialogue)
 	{
         m_Animator.SetBool("IsOpen", true);
@@ -29,6 +33,9 @@ public class DialogueManager : MonoBehaviour {
 		StartMonologue();
     }
 
+	/// <summary>
+	/// Start the monologue based on CurrentMonologueIndex and show the first sentence
+	/// </summary>
 	public void StartMonologue()
 	{
         m_NPCName.text = m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].name;
@@ -45,6 +52,9 @@ public class DialogueManager : MonoBehaviour {
 		DisplayNextSentence();
 	}
 
+	/// <summary>
+	/// SHow the first sentence available in the list of CurrentText
+	/// </summary>
 	public void DisplayNextSentence ()
 	{
         m_CurrentText.RemoveAt(0);
@@ -67,6 +77,11 @@ public class DialogueManager : MonoBehaviour {
 		StartCoroutine(TypeSentence(sentence));
     }
 
+	/// <summary>
+	/// Type letter by letter the entire senteces passed by param in UI
+	/// </summary>
+	/// <param name="sentence"></param>
+	/// <returns></returns>
 	IEnumerator TypeSentence (string sentence)
 	{
 		m_DialogueTextBox.text = "";
@@ -77,6 +92,9 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Stop dialogue, reset all to default values and hide text box in UI
+	/// </summary>
 	void EndDialogue()
 	{
 		m_Animator.SetBool("IsOpen", false);
