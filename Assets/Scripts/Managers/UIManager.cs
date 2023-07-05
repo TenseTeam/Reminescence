@@ -7,29 +7,27 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Pause Menu")]
-    [SerializeField] private GameObject m_PauseMenu;
-
     [Header("Interaction System")]
     [SerializeField] private GameObject m_ItemInteraction;
     [SerializeField] private Image m_ItemInteractionImage;
     [SerializeField] private TextMeshProUGUI m_ItemInteractionDescription; 
-    [SerializeField] private Image m_InteractionIcon;
+    [SerializeField] private GameObject m_InteractionIcon;
     [SerializeField] private KeyCode m_HideInteractionKey;
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, ShowInteractableItem);
         SetActiveObject(m_ItemInteraction);
-        SetActiveObject(m_PauseMenu);
+        SetActiveObject(m_InteractionIcon);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (m_ItemInteraction.activeInHierarchy && Input.GetKeyDown(m_HideInteractionKey))
+        if (m_ItemInteraction.activeSelf && Input.GetKeyDown(m_HideInteractionKey))
         {
             SetActiveObject(m_ItemInteraction);
+            GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_STOP_INTERACTION, false);
         }
     }
 
@@ -40,7 +38,6 @@ public class UIManager : MonoBehaviour
 
     public void ShowInteractableItem(object[] param)
     {
-        SetActiveObject(m_ItemInteraction);
         switch (((ItemBaseData)param[0]).Type)
         {
             case ItemType.Furniture:
@@ -60,5 +57,12 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionDescription.gameObject.SetActive(false);
                 break;
         }
+        SetActiveObject(m_ItemInteraction);
+        SetActiveObject(m_InteractionIcon);
+    }
+
+    public void SetActiveInteractIcon()
+    {
+        SetActiveObject(m_InteractionIcon);
     }
 }
