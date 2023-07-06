@@ -11,11 +11,15 @@ public class GameManager : Singleton<GameManager>
     private EventManager m_EventManager;
     public EventManager EventManager { get => m_EventManager;}
 
+    private DialogueManager m_DialogueManager;
+    public DialogueManager DialogueManager { get => m_DialogueManager; }
+
 
     // Start is called before the first frame update
     void OnEnable()
     {
         m_UIManager = GetComponentInChildren<UIManager>();
+        m_DialogueManager = GetComponentInChildren<DialogueManager>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 
