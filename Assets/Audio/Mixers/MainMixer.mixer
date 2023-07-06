@@ -69,7 +69,7 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 6d798e16b2ba75c42b0d2973d6462dda
-    name: VolumeEffects
+    name: VolumeSFX
   - guid: e8769bef6d1b08546bbe43fa4196d5ed
     name: VolumeMaster
   - guid: 71ef911a001493f42a1bb8d901be9b6d
