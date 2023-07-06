@@ -5,6 +5,7 @@ using UnityEngine;
 public static class Constants
 {
     public static string EVENT_INTERACTION = "interactEvent";
+    public static string EVENT_STOP_INTERACTION = "stopInteractEvent";
     public static string EVENT_CHECK_SIDE_QUEST = "checkSideQuestEvent";
     public static string EVENT_FRAME = "showFrameEvent";
 

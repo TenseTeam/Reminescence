@@ -11,6 +11,7 @@ public class MovementComponent : MonoBehaviour
     private Rigidbody2D m_RigidBody;
     private SpriteRenderer m_Sprite;
     private Animator m_Animator;
+    private bool m_IsInteracting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class MovementComponent : MonoBehaviour
         m_RigidBody = GetComponent<Rigidbody2D>();
         m_Animator = GetComponent<Animator>();
         m_Sprite = GetComponent<SpriteRenderer>();
+        GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, ManageFreeze);
+        GameManager.instance.EventManager.Register(Constants.EVENT_STOP_INTERACTION, ManageFreeze);
     }
 
     /// <summary>
@@ -27,11 +30,19 @@ public class MovementComponent : MonoBehaviour
     /// <param name="horizontal"></param>
     public void Move(float vertical, float horizontal)
     {
-        m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
+        if (!m_IsInteracting)
+        {
+            m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
-        ManageAnimation();
+            ManageAnimation();
+        }
     }
 
+    public void ManageFreeze(object[] param)
+    {
+        m_IsInteracting = !m_IsInteracting;
+    }
+        
     /// <summary>
     /// manage animation for to right/left, up and down
     /// </summary>

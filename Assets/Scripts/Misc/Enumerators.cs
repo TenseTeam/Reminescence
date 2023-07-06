@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Forniture,
+    Furniture,
     NewsPaper,
     Frame,
     PieceOfFrame
