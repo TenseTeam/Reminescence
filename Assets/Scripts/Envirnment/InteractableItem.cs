@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class InteractableItem : MonoBehaviour, IInteractable
 {
     [SerializeField] private ItemBaseData m_Item;
@@ -15,6 +16,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
     private bool m_IsInteractable = true;
     private GameObject m_Highlight;
     private InteractionComponent m_PlayerInteraction; 
+    private AudioSource m_AudioSource;
 
     private bool m_InRange = false;
 
@@ -23,6 +25,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
         GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -46,7 +49,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// <param name="interaction"></param>
     public void Interact(InteractionComponent interaction)
     {
-        interaction.Interact(m_Item, m_QuestIndex);
+        interaction.Interact(m_Item, m_QuestIndex, m_AudioSource);
     }
 
     /// <summary>

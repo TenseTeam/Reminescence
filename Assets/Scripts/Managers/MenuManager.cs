@@ -12,7 +12,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject m_OptionMenu;
     [SerializeField] private GameObject m_CreditsMenu;
 
-    public AudioMixer AudioMixer;
     public Slider MasterSlider, MusicSlider, EffectsSlider;
     private bool activeMusic = true;
     public Image MusicCheckBox;
@@ -99,14 +98,14 @@ public class MenuManager : MonoBehaviour
     {
         if (activeMusic)
         {
-            AudioMixer.SetFloat("VolumeMaster", 0);
+            GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", 0);
             MusicCheckBox.color = Color.cyan;
             activeMusic = !activeMusic;
             return;
         }
         if (!activeMusic)
         {
-            AudioMixer.SetFloat("VolumeMaster", -80);
+            GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", -80);
             MusicCheckBox.color = Color.grey;
             activeMusic = !activeMusic;
             return;
@@ -131,7 +130,7 @@ public class MenuManager : MonoBehaviour
     /// <param name="groupName">Audio Mixer group name</param>
     private void SetAudioLevel(Slider slider, string key, string groupName)
     {
-        AudioMixer.SetFloat(groupName, Mathf.Log10(slider.value) * 20);
+        GameManager.instance.AudioManager.AudioMixer.SetFloat(groupName, Mathf.Log10(slider.value) * 20);
         PlayerPrefs.SetFloat(key, slider.value);
     }
 }
