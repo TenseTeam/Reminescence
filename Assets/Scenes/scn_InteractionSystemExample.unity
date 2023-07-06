@@ -102139,7 +102139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80105dad723bf474789a0647eeaaeced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OtherPosition: {fileID: 1842402416}
+  m_OtherPosition: {fileID: 1842402417}
 --- !u!212 &1655191814
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113529,7 +113529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80105dad723bf474789a0647eeaaeced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OtherPosition: {fileID: 1655191812}
+  m_OtherPosition: {fileID: 1655191813}
 --- !u!61 &1842402418
 BoxCollider2D:
   m_ObjectHideFlags: 0
