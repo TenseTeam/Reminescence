@@ -12,12 +12,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_ItemInteractionDescription; 
     [SerializeField] private GameObject m_InteractionIcon;
     [SerializeField] private KeyCode m_HideInteractionKey;
+    [SerializeField] private KeyCode m_ShowHidePauseMenuKey;
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, ShowInteractableItem);
-        SetActiveObject(m_ItemInteraction);
-        SetActiveObject(m_InteractionIcon);
+        SetActiveObject(m_ItemInteraction, false);
+        SetActiveObject(m_InteractionIcon, false);
+        SetActiveObject(GameManager.instance.MenuManager.Menu, false);
     }
 
     // Update is called once per frame
@@ -25,14 +27,32 @@ public class UIManager : MonoBehaviour
     {
         if (m_ItemInteraction.activeSelf && Input.GetKeyDown(m_HideInteractionKey))
         {
-            SetActiveObject(m_ItemInteraction);
+            SetActiveObject(m_ItemInteraction, false);
             GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_STOP_INTERACTION, false);
+        }
+        if (Input.GetKeyDown(m_ShowHidePauseMenuKey)) 
+        {
+            ShowHideMenu();
         }
     }
 
-    private void SetActiveObject(GameObject obj)
+    private void SetActiveObject(GameObject obj, bool value)
     {
-        obj.SetActive(!obj.activeInHierarchy);
+        obj.SetActive(value);
+    }
+
+    public void ShowHideMenu()
+    {
+        if (Time.timeScale == 1f)
+        {
+            SetActiveObject(GameManager.instance.MenuManager.Menu, true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            SetActiveObject(GameManager.instance.MenuManager.Menu, false);
+            Time.timeScale = 1f;
+        }
     }
 
     public void ShowInteractableItem(object[] param)
@@ -56,12 +76,12 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionDescription.gameObject.SetActive(false);
                 break;
         }
-        SetActiveObject(m_ItemInteraction);
-        SetActiveObject(m_InteractionIcon);
+        SetActiveObject(m_ItemInteraction, true);
+        SetActiveObject(m_InteractionIcon, true);
     }
 
-    public void SetActiveInteractIcon()
+    public void SetActiveInteractIcon(bool value)
     {
-        SetActiveObject(m_InteractionIcon);
+        SetActiveObject(m_InteractionIcon, value);
     }
 }

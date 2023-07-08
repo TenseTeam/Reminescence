@@ -8,13 +8,19 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     [Header("Menu")]
+    [SerializeField] private GameObject m_Menu;
     [SerializeField] private GameObject m_BaseMenu;
     [SerializeField] private GameObject m_OptionMenu;
     [SerializeField] private GameObject m_CreditsMenu;
+    [SerializeField] private Sprite MusicCheckBoxOff;
+    [SerializeField] private Sprite MusicCheckBoxOn;
 
     public Slider MasterSlider, MusicSlider, EffectsSlider;
     private bool activeMusic = true;
     public Image MusicCheckBox;
+
+
+    public GameObject Menu { get => m_Menu;}
 
     private void Start()
     {
@@ -37,7 +43,12 @@ public class MenuManager : MonoBehaviour
 
     public void Resume()
     {
-        Time.timeScale = 1.0f;
+        GameManager.instance.UIManager.ShowHideMenu();
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     #region audio
@@ -99,14 +110,14 @@ public class MenuManager : MonoBehaviour
         if (activeMusic)
         {
             GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", 0);
-            MusicCheckBox.color = Color.cyan;
+            MusicCheckBox.sprite = MusicCheckBoxOn;
             activeMusic = !activeMusic;
             return;
         }
         if (!activeMusic)
         {
             GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", -80);
-            MusicCheckBox.color = Color.grey;
+            MusicCheckBox.sprite = MusicCheckBoxOff;
             activeMusic = !activeMusic;
             return;
         }
