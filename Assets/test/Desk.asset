@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Desk
   m_EditorClassIdentifier: 
   Type: 0
-  AudioSFX: {fileID: 0}
+  AudioSFX: {fileID: 8300000, guid: 1118cafb601df904fb47c9845902db47, type: 3}
   Description: "Questa \xE8 una scrivania"

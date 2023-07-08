@@ -8,19 +8,19 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class InteractableItem : MonoBehaviour, IInteractable
 {
-    [SerializeField] private ItemBaseData m_Item;
-    [SerializeField] private int m_QuestIndex;
-    [SerializeField] private Color m_ColorHighlight;
-    [SerializeField] private float m_WidthHighlight;
+    [SerializeField] protected ItemBaseData m_Item;
+    [SerializeField] protected int m_QuestIndex;
+    [SerializeField] protected Color m_ColorHighlight;
+    [SerializeField] protected float m_WidthHighlight;
 
-    private bool m_IsInteractable = true;
-    private GameObject m_Highlight;
-    private InteractionComponent m_PlayerInteraction; 
-    private AudioSource m_AudioSource;
+    protected bool m_IsInteractable = true;
+    protected GameObject m_Highlight;
+    protected InteractionComponent m_PlayerInteraction;
+    protected AudioSource m_AudioSource;
 
-    private bool m_InRange = false;
+    protected bool m_InRange = false;
 
-    private void Start()
+    protected void Start()
     {
         GetComponent<Rigidbody2D>().sleepMode = RigidbodySleepMode2D.NeverSleep;
         GetComponent<Rigidbody2D>().isKinematic = true;
@@ -28,7 +28,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
         m_AudioSource = GetComponent<AudioSource>();
     }
 
-    private void Update()
+    protected void Update()
     {
         //interaction between item and player
         if (m_PlayerInteraction != null)
@@ -56,7 +56,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// graphic feedback for interactable item
     /// </summary>
     /// <param name="mode"></param>
-    private void HighLight(bool mode)
+    protected void HighLight(bool mode)
     {
         if (mode)
         {
@@ -73,7 +73,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// feedback for entering in item's area
     /// </summary>
     /// <param name="other"></param>
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out InteractionComponent player) && m_IsInteractable)
         {
@@ -88,7 +88,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
     /// feedback for exiting from item's area
     /// </summary>
     /// <param name="other"></param>
-    private void OnTriggerExit2D(Collider2D other)
+    protected void OnTriggerExit2D(Collider2D other)
     {
         if (other.TryGetComponent(out IPlayer player) && m_IsInteractable)
         {
