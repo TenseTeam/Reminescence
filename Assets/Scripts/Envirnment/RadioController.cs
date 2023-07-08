@@ -19,17 +19,7 @@ public class RadioController : InteractableItem
 
     protected new void Update()
     {
-        //interaction between item and player
-        if (m_PlayerInteraction != null)
-        {
-            if (Input.GetKeyDown(KeyCode.E) && m_InRange)
-            {
-                Interact(m_PlayerInteraction);
-                m_IsInteractable = false;
-                HighLight(false);
-                m_PlayerInteraction = null;
-            }
-        }
+        base.Update();
 
         //check if the actual clip is in running and if the actual clip differs from the loop clip
         if(!m_AudioSource.isPlaying && m_AudioSource.clip != m_AudioClipLoop)
@@ -37,6 +27,7 @@ public class RadioController : InteractableItem
             m_AudioSource.loop = true;
             m_AudioSource.clip = m_AudioClipLoop;
             m_AudioSource.outputAudioMixerGroup = m_AudioGroupLoop;
+            m_AudioSource.Play();
         }
     }
 }

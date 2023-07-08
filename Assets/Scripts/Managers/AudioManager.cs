@@ -25,6 +25,7 @@ public class AudioManager : MonoBehaviour
     {
         ((AudioSource)param[2]).loop = false;
         ((AudioSource)param[2]).outputAudioMixerGroup = m_EffectsGroup;
-        ((AudioSource)param[2]).PlayOneShot(((ItemBaseData)param[0]).AudioSFX);
+        ((AudioSource)param[2]).clip = ((ItemBaseData)param[0]).AudioSFX;
+        ((AudioSource)param[2]).Play();
     }
 }
