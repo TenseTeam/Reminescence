@@ -9,16 +9,11 @@ public class FrameController : MonoBehaviour
     [SerializeField] private int m_SideQuestIndex;
     [SerializeField] private Sprite m_FullFrame;
 
-    private void Start()
-    {
-        GameManager.instance.EventManager.Register(Constants.EVENT_FRAME, ChangeTexture);
-    }
-
     /// <summary>
     /// change gameObject texture when method is triggered
     /// </summary>
     /// <param name="parameters"></param>
-    public void ChangeTexture(object[] parameters)
+    public void ChangeTexture()
     {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = m_FullFrame;
@@ -32,7 +27,7 @@ public class FrameController : MonoBehaviour
     {
         if (GameManager.instance.QuestManager.CheckSideQuest(m_SideQuestIndex))
         {
-            GetComponent<SpriteRenderer>().sprite = m_FullFrame;
+            ChangeTexture();
         }
     }
 }

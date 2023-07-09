@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Sprite MusicCheckBoxOn;
 
     public Slider MasterSlider, MusicSlider, EffectsSlider;
-    private bool activeMusic = true;
+    private bool m_ActiveMusic = true;
     public Image MusicCheckBox;
 
 
@@ -107,18 +107,18 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     public void ToggleMusic()
     {
-        if (activeMusic)
+        if (m_ActiveMusic)
         {
             GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", 0);
             MusicCheckBox.sprite = MusicCheckBoxOn;
-            activeMusic = !activeMusic;
+            m_ActiveMusic = !m_ActiveMusic;
             return;
         }
-        if (!activeMusic)
+        if (!m_ActiveMusic)
         {
             GameManager.instance.AudioManager.AudioMixer.SetFloat("VolumeMaster", -80);
             MusicCheckBox.sprite = MusicCheckBoxOff;
-            activeMusic = !activeMusic;
+            m_ActiveMusic = !m_ActiveMusic;
             return;
         }
     }
