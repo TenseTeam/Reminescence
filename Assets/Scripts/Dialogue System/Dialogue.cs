@@ -10,8 +10,8 @@ public class Dialogue {
 [System.Serializable]
 public class Monologue
 {
-    public string name;
+    public string Name;
 
     [TextArea(3, 10)]
-    public string[] sentences;
+    public string[] Sentences;
 }

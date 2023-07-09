@@ -19,7 +19,6 @@ public class QuestManager : MonoBehaviour
     private void Start()
     {
         GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, UpdateQuest);
-        GameManager.instance.EventManager.Register(Constants.EVENT_CHECK_SIDE_QUEST, CheckSideQuest);
     }
 
     /// <summary>
@@ -86,19 +85,20 @@ public class QuestManager : MonoBehaviour
     /// <summary>
     /// Check if the specified side quest is completed
     /// </summary>
-    /// <param name="parameters"></param>
+    /// <param name="index"></param>
     /// <returns></returns>
-    public void CheckSideQuest(object[] parameters)
+    public bool CheckSideQuest(int index)
     {
-        //is need the index of the quest list, it is incapsulated in "parameters" at position 1 (see attached class diagram)
+        //is needed the index of the quest list, it is incapsulated in "parameters" at position 1 (see attached class diagram)
         bool checkVerified = true;
-        for (int i = 0; i < m_QuestList[(int)parameters[0]].m_SideQuest.Length; i++)
+        for (int i = 0; i < m_QuestList[index].m_SideQuest.Length; i++)
         {
-            if (m_QuestList[(int)parameters[0]].m_SideQuest[i] == false)
+            if (m_QuestList[index].m_SideQuest[i] == false)
             {
                 checkVerified = false;
                 break;
             }
-        }       
+        }
+        return checkVerified;
     }
 }

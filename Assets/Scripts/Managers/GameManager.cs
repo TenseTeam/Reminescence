@@ -8,11 +8,11 @@ public class GameManager : Singleton<GameManager>
     private UIManager m_UIManager;
     public UIManager UIManager { get => m_UIManager;}
 
-    private MenuManager m_MenuManager;
-    public MenuManager MenuManager { get => m_MenuManager; }
-
     private EventManager m_EventManager;
     public EventManager EventManager { get => m_EventManager;}
+
+    private QuestManager m_QuestManager;
+    public QuestManager QuestManager { get => m_QuestManager; }
 
     private DialogueManager m_DialogueManager;
     public DialogueManager DialogueManager { get => m_DialogueManager; }
@@ -20,19 +20,20 @@ public class GameManager : Singleton<GameManager>
     private AudioManager m_AudioManager;
     public AudioManager AudioManager { get => m_AudioManager; }
 
+
     // Start is called before the first frame update
     void OnEnable()
     {
         m_UIManager = GetComponentInChildren<UIManager>();
         m_DialogueManager = GetComponentInChildren<DialogueManager>();
         m_AudioManager = GetComponentInChildren<AudioManager>();
-        m_MenuManager = GetComponentInChildren<MenuManager>();
+        m_QuestManager = GetComponentInChildren<QuestManager>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 
     private void Start()
     {
-        instance.EventManager.Register(Constants.EVENT_CHANGE_SCENE, LevelCompleted);
+        instance.EventManager.Register(Constants.EVENT_END_LEVEL, LevelCompleted);
     }
 
     /// <summary>

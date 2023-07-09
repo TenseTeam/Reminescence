@@ -21,8 +21,8 @@ public class DoorController : MonoBehaviour
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        Destroy(collider);
-        Destroy(renderer);
+        collider.gameObject.SetActive(false);
+        renderer.gameObject.SetActive(false);
     }
 
     /// <summary>
