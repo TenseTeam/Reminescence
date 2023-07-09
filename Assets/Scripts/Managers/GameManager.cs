@@ -20,6 +20,9 @@ public class GameManager : Singleton<GameManager>
     private AudioManager m_AudioManager;
     public AudioManager AudioManager { get => m_AudioManager; }
 
+    private MenuManager m_MenuManager;
+    public MenuManager MenuManager { get => m_MenuManager; }
+
 
     // Start is called before the first frame update
     void OnEnable()
