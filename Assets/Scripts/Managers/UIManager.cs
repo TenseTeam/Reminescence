@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject m_ItemInteraction;
     [SerializeField] private Image m_ItemInteractionImage;
     [SerializeField] private TextMeshProUGUI m_ItemInteractionDescription; 
+    [SerializeField] private TextMeshProUGUI m_ItemInteractionTitle; 
     [SerializeField] private GameObject m_InteractionIcon;
     [SerializeField] private KeyCode m_HideInteractionKey;
     [SerializeField] private KeyCode m_ShowHidePauseMenuKey;
@@ -62,6 +63,7 @@ public class UIManager : MonoBehaviour
             case ItemType.Furniture:
                 m_ItemInteractionImage.gameObject.SetActive(false);
                 m_ItemInteractionDescription.gameObject.SetActive(true);
+                m_ItemInteractionTitle.gameObject.SetActive(false);
                 m_ItemInteractionDescription.text = ((FornitureiteamData)param[0]).Description;
                 break;
             case ItemType.NewsPaper:
@@ -69,11 +71,14 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionImage.sprite = ((NewsPaperItemData)param[0]).UiImage;
                 m_ItemInteractionDescription.gameObject.SetActive(true);
                 m_ItemInteractionDescription.text = ((NewsPaperItemData)param[0]).Description;
+                m_ItemInteractionTitle.gameObject.SetActive(true);
+                m_ItemInteractionTitle.text = ((NewsPaperItemData)param[0]).Title;
                 break;
             case ItemType.Frame:
                 m_ItemInteractionImage.gameObject.SetActive(true);
                 m_ItemInteractionImage.sprite = ((UiItemData)param[0]).UiImage;
                 m_ItemInteractionDescription.gameObject.SetActive(false);
+                m_ItemInteractionTitle.gameObject.SetActive(false);
                 break;
         }
         SetActiveObject(m_ItemInteraction, true);
