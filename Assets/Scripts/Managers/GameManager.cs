@@ -8,6 +8,9 @@ public class GameManager : Singleton<GameManager>
     private UIManager m_UIManager;
     public UIManager UIManager { get => m_UIManager;}
 
+    private MenuManager m_MenuManager;
+    public MenuManager MenuManager { get => m_MenuManager; }
+
     private EventManager m_EventManager;
     public EventManager EventManager { get => m_EventManager;}
 
@@ -23,6 +26,7 @@ public class GameManager : Singleton<GameManager>
         m_UIManager = GetComponentInChildren<UIManager>();
         m_DialogueManager = GetComponentInChildren<DialogueManager>();
         m_AudioManager = GetComponentInChildren<AudioManager>();
+        m_MenuManager = GetComponentInChildren<MenuManager>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 

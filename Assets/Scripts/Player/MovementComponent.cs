@@ -34,13 +34,14 @@ public class MovementComponent : MonoBehaviour
         {
             m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
-            ManageAnimation();
         }
+        ManageAnimation();
     }
 
     public void ManageFreeze(object[] param)
     {
         m_IsInteracting = !m_IsInteracting;
+        m_RigidBody.velocity = Vector2.zero;
     }
         
     /// <summary>

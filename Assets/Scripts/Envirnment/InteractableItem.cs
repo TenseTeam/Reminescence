@@ -80,7 +80,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
             m_InRange = true;
             HighLight(true);
             m_PlayerInteraction = player;
-            GameManager.instance.UIManager.SetActiveInteractIcon();
+            GameManager.instance.UIManager.SetActiveInteractIcon(true);
         }
     }
 
@@ -98,7 +98,7 @@ public class InteractableItem : MonoBehaviour, IInteractable
                 HighLight(false);
                 m_PlayerInteraction = null;
             }
-            GameManager.instance.UIManager.SetActiveInteractIcon();
+            GameManager.instance.UIManager.SetActiveInteractIcon(false);
         }
     }
 }
