@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: playerInteract
+  m_Name: midPlayerWalkUp
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,15 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 506785101, guid: e820d14a10342e34b97d984e104b2e6a, type: 3}
-    - time: 0.33333334
-      value: {fileID: 990841058, guid: e820d14a10342e34b97d984e104b2e6a, type: 3}
+      value: {fileID: 156061825, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - time: 0.25
+      value: {fileID: -1926088328, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - time: 0.53333336
+      value: {fileID: -1151692193, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - time: 0.76666665
+      value: {fileID: 2143773373, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - time: 1
+      value: {fileID: 156061825, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +48,17 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 506785101, guid: e820d14a10342e34b97d984e104b2e6a, type: 3}
-    - {fileID: 990841058, guid: e820d14a10342e34b97d984e104b2e6a, type: 3}
+    - {fileID: 156061825, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - {fileID: -1926088328, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - {fileID: -1151692193, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - {fileID: 2143773373, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
+    - {fileID: 156061825, guid: e42173b1793da7b48b5f7ba914731241, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.35000002
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
