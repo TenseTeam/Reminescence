@@ -11,14 +11,15 @@ public class GameManager : Singleton<GameManager>
     private EventManager m_EventManager;
     public EventManager EventManager { get => m_EventManager;}
 
+    private QuestManager m_QuestManager;
+    public QuestManager QuestManager { get => m_QuestManager; }
+
     private DialogueManager m_DialogueManager;
     public DialogueManager DialogueManager { get => m_DialogueManager; }
     
     private AudioManager m_AudioManager;
     public AudioManager AudioManager { get => m_AudioManager; }
 
-    private QuestManager m_QuestManager;
-    public QuestManager QuestManager { get => m_QuestManager; }
 
     // Start is called before the first frame update
     void OnEnable()
