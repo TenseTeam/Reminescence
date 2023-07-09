@@ -20,9 +20,12 @@ public class DoorController : MonoBehaviour
     public void ThroughDoor(object[] parameters)
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        Destroy(collider);
-        Destroy(renderer);
+        collider.gameObject.SetActive(false);
+
+        SpriteRenderer render1 = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        SpriteRenderer render2 = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        render1.gameObject.SetActive(false);
+        render2.gameObject.SetActive(false);
     }
 
     /// <summary>
