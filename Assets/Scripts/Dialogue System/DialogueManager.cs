@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour {
 	private int m_CurrentMonologueIndex;
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		m_CurrentText = new List<string>();
 	}
 
@@ -38,13 +38,13 @@ public class DialogueManager : MonoBehaviour {
 	/// </summary>
 	public void StartMonologue()
 	{
-        m_NPCName.text = m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].name;
+        m_NPCName.text = m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].Name;
 
 		m_CurrentText.Clear();
 
 		m_CurrentText.Add(null);
 
-		foreach (string sentence in m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].sentences)
+		foreach (string sentence in m_ActualDialogue.DialogueParts[m_CurrentMonologueIndex].Sentences)
 		{
 			m_CurrentText.Add(sentence);
         }
@@ -82,7 +82,7 @@ public class DialogueManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="sentence"></param>
 	/// <returns></returns>
-	IEnumerator TypeSentence (string sentence)
+	private IEnumerator TypeSentence (string sentence)
 	{
 		m_DialogueTextBox.text = "";
 		foreach (char letter in sentence.ToCharArray())
@@ -95,7 +95,7 @@ public class DialogueManager : MonoBehaviour {
 	/// <summary>
 	/// Stop dialogue, reset all to default values and hide text box in UI
 	/// </summary>
-	void EndDialogue()
+	private void EndDialogue()
 	{
 		m_Animator.SetBool("IsOpen", false);
 		m_ActualDialogue = null;

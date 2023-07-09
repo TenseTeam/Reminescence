@@ -6,7 +6,7 @@ using UnityEngine;
 public class StairController : MonoBehaviour
 {
     [SerializeField] private StairController m_OtherPosition;
-    bool m_IsArriving = false;
+    private bool m_IsArriving = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

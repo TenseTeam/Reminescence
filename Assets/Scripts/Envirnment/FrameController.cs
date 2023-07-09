@@ -30,6 +30,9 @@ public class FrameController : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_CHECK_SIDE_QUEST, m_SideQuestIndex);
+        if (GameManager.instance.QuestManager.CheckSideQuest(m_SideQuestIndex))
+        {
+            GetComponent<SpriteRenderer>().sprite = m_FullFrame;
+        }
     }
 }
