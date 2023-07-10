@@ -5,12 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public class MovementComponent : MonoBehaviour
 {
     [SerializeField] private float m_MovementSpeed = 0f;
     private Rigidbody2D m_RigidBody;
     private SpriteRenderer m_Sprite;
     private Animator m_Animator;
+    private AudioSource m_AudioSource;
     private bool m_IsInteracting = false;
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class MovementComponent : MonoBehaviour
         m_RigidBody = GetComponent<Rigidbody2D>();
         m_Animator = GetComponent<Animator>();
         m_Sprite = GetComponent<SpriteRenderer>();
+        m_AudioSource = GetComponent<AudioSource>();
         GameManager.instance.EventManager.Register(Constants.EVENT_INTERACTION, ManageFreeze);
         GameManager.instance.EventManager.Register(Constants.EVENT_STOP_INTERACTION, ManageFreeze);
     }
@@ -34,6 +37,10 @@ public class MovementComponent : MonoBehaviour
         {
             m_RigidBody.velocity = (Vector2.up * vertical + Vector2.right * horizontal) * (m_MovementSpeed * 100) * Time.deltaTime;
 
+            if(m_RigidBody.velocity.magnitude == 0f)
+                m_AudioSource.Stop();
+            if (!m_AudioSource.isPlaying && m_RigidBody.velocity.magnitude > 0f)
+                m_AudioSource.Play();
         }
         ManageAnimation();
     }
