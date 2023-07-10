@@ -12,7 +12,7 @@ public class RadioController : InteractableItem
     protected new void Start()
     {
         base.Start();
-        m_AudioSource.loop = true;
+        //m_AudioSource.loop = true;
         m_AudioClipLoop = m_AudioSource.clip;
         m_AudioGroupLoop = m_AudioSource.outputAudioMixerGroup;
     }
@@ -24,7 +24,7 @@ public class RadioController : InteractableItem
         //check if the actual clip is in running and if the actual clip differs from the loop clip
         if(!m_AudioSource.isPlaying && m_AudioSource.clip != m_AudioClipLoop)
         {
-            m_AudioSource.loop = true;
+            //m_AudioSource.loop = true;
             m_AudioSource.clip = m_AudioClipLoop;
             m_AudioSource.outputAudioMixerGroup = m_AudioGroupLoop;
             m_AudioSource.Play();
