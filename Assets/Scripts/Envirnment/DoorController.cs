@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(AudioSource))]
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private int m_NextScene;
@@ -21,9 +22,8 @@ public class DoorController : MonoBehaviour
     /// <param name="parameters"></param>
     public void ThroughDoor(object[] parameters)
     {
-        BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        collider.gameObject.SetActive(false);
-
+        GetComponent<BoxCollider2D>().gameObject.SetActive(false);
+        GetComponent<AudioSource>().Play();
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = m_PartUpOpenDoor;
         transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = m_PartDownOpenDoor;
     }
