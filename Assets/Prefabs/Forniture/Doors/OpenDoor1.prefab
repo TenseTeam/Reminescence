@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 868060276805358276}
+  - component: {fileID: 867125977270636387}
   m_Layer: 0
   m_Name: OpenDoor1
   m_TagString: Untagged
@@ -33,6 +34,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867125977270636387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598848211301389566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.10744348, y: -0.038197793, z: 0}
+  - {x: -0.10504261, y: 0.34173656, z: 0}
+  - {x: 0.11704738, y: 0.34581092, z: 0}
+  - {x: 0.119448416, y: -0.036160544, z: 0}
+  m_ShapePathHash: 972762657
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -637062
+  m_LocalBounds:
+    m_Center: {x: 0.006002471, y: 0.15380657, z: 0}
+    m_Extent: {x: 0.11344595, y: 0.19200435, z: 0}
 --- !u!1 &1039752520264781055
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,8 +136,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -1210082916, guid: 6ed8cb6b08e9f1244be35537a6f59cd0, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1437516181, guid: 6ed8cb6b08e9f1244be35537a6f59cd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,8 +220,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: -448470010, guid: 6ed8cb6b08e9f1244be35537a6f59cd0, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1603725825, guid: 6ed8cb6b08e9f1244be35537a6f59cd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
