@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
                 break;
         }
         SetActiveObject(m_ItemInteraction, true);
-        SetActiveObject(m_InteractionIcon, true);
+        SetActiveObject(m_InteractionIcon, false);
     }
 
     public void SetActiveInteractIcon(bool value)
