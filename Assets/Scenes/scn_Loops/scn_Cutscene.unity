@@ -3042,6 +3042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063843005}
   - component: {fileID: 1063843004}
+  - component: {fileID: 1063843006}
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -3089,6 +3090,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1063843006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063843003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c56e5722594f39429f1fec1afb245ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayableDirector: {fileID: 0}
+  m_NextScene: 0
 --- !u!1 &1098657629
 GameObject:
   m_ObjectHideFlags: 0
@@ -10860,9 +10875,6 @@ GameObject:
   - component: {fileID: 1468342940}
   - component: {fileID: 1468342939}
   - component: {fileID: 1468342938}
-  - component: {fileID: 1468342937}
-  - component: {fileID: 1468342936}
-  - component: {fileID: 1468342935}
   m_Layer: 0
   m_Name: Player(Old)
   m_TagString: Untagged
@@ -10870,43 +10882,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1468342935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468342934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c61123beb139e049b303749ba9f5978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1468342936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468342934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ac0f035a13afb42b437b04562a7ae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1468342937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468342934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7c4324b47be56e46b4ce3c505ab220e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovementSpeed: 0.1
 --- !u!95 &1468342938
 Animator:
   serializedVersion: 5

@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         m_DialogueManager = GetComponentInChildren<DialogueManager>();
         m_AudioManager = GetComponentInChildren<AudioManager>();
         m_QuestManager = GetComponentInChildren<QuestManager>();
+        m_MenuManager = GetComponentInChildren<MenuManager>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 
