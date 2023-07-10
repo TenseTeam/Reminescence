@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Newspaper 1
   m_EditorClassIdentifier: 
   Type: 1
-  AudioSFX: {fileID: 0}
+  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: dc0306a4f3ca02c41896a69b889cfa05, type: 3}
   Title: 'April 12th - 1981 California '
   Description: 'Bringing Business Brilliance to South Pasadena: Natan''s Arrival
