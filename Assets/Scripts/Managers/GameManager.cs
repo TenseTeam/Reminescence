@@ -41,8 +41,8 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        instance.EventManager.Register(Constants.EVENT_END_LEVEL, LevelCompleted);
-        instance.EventManager.Register(Constants.EVENT_END_LEVEL, (param) => m_Fade.DoFadeIn());
+        instance.EventManager.Register(Constants.EVENT_END_LEVEL, Fading);
+        instance.EventManager.Register(Constants.EVENT_AFTER_FADE, LevelCompleted);
     }
 
     /// <summary>
@@ -54,5 +54,15 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadScene((int)parameters[0]);
     }
 
-    public void Fading() => Debug.Log("");
+    public void Fading(object[] parameters)
+    {
+        m_Fade.DoFadeIn();
+        StartCoroutine(Load((int)parameters[0]));
+    }
+
+    private IEnumerator Load(int nextScene)
+    {
+        yield return new WaitForSeconds(m_Fade.FadeDuration);
+        instance.EventManager.TriggerEvent(Constants.EVENT_AFTER_FADE, nextScene);
+    }
 }
