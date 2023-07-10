@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
         if (m_ItemInteraction.activeSelf && Input.GetKeyDown(m_HideInteractionKey))
         {
             SetActiveObject(m_ItemInteraction, false);
+            SetActiveObject(m_InteractionIcon, false);
             GameManager.instance.EventManager.TriggerEvent(Constants.EVENT_STOP_INTERACTION, false);
         }
         if (Input.GetKeyDown(m_ShowHidePauseMenuKey)) 
