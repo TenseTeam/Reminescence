@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4f9ce4b46c51d04c980e7f3b064b803, type: 3}
-  m_Name: Newspaper 2
+  m_Name: "Newspaper N\xB08"
   m_EditorClassIdentifier: 
   Type: 0
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}

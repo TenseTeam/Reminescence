@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f9ce4b46c51d04c980e7f3b064b803, type: 3}
-  m_Name: Newspaper 9
+  m_Script: {fileID: 11500000, guid: 26421372973fc164b805a814ae62f145, type: 3}
+  m_Name: Broken Bottle
   m_EditorClassIdentifier: 
   Type: 0
-  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
-  UiImage: {fileID: 0}
-  Title: 
+  AudioSFX: {fileID: 8300000, guid: 27001cc22e12c75408fae314f0ecd194, type: 3}
   Description: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Full Frame
   m_EditorClassIdentifier: 
   Type: 2
-  AudioSFX: {fileID: 0}
-  UiImage: {fileID: 21300000, guid: 7e35b3ae69dea0047bbbbae28ae3d81f, type: 3}
+  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
+  UiImage: {fileID: 21300000, guid: 4145d917416d47d44bfc9a6a2db67abb, type: 3}
