@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("Interaction System")]
     [SerializeField] private GameObject m_ItemInteraction;
+    [SerializeField] private GameObject m_ItemFrame;
     [SerializeField] private Image m_ItemInteractionImage;
     [SerializeField] private TextMeshProUGUI m_ItemInteractionDescription; 
     [SerializeField] private TextMeshProUGUI m_ItemInteractionTitle; 
@@ -64,6 +65,7 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionImage.gameObject.SetActive(false);
                 m_ItemInteractionDescription.gameObject.SetActive(true);
                 m_ItemInteractionTitle.gameObject.SetActive(false);
+                m_ItemFrame.gameObject.SetActive(false);
                 m_ItemInteractionDescription.text = ((FornitureiteamData)param[0]).Description;
                 break;
             case ItemType.NewsPaper:
@@ -73,12 +75,14 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionDescription.text = ((NewsPaperItemData)param[0]).Description;
                 m_ItemInteractionTitle.gameObject.SetActive(true);
                 m_ItemInteractionTitle.text = ((NewsPaperItemData)param[0]).Title;
+                m_ItemFrame.gameObject.SetActive(true);
                 break;
             case ItemType.Frame:
                 m_ItemInteractionImage.gameObject.SetActive(true);
                 m_ItemInteractionImage.sprite = ((UiItemData)param[0]).UiImage;
                 m_ItemInteractionDescription.gameObject.SetActive(false);
                 m_ItemInteractionTitle.gameObject.SetActive(false);
+                m_ItemFrame.gameObject.SetActive(false);
                 break;
         }
         SetActiveObject(m_ItemInteraction, true);
