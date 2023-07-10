@@ -6,22 +6,25 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     private UIManager m_UIManager;
-    public UIManager UIManager { get => m_UIManager;}
+    public UIManager UIManager { get => m_UIManager; }
 
     private EventManager m_EventManager;
-    public EventManager EventManager { get => m_EventManager;}
+    public EventManager EventManager { get => m_EventManager; }
 
     private QuestManager m_QuestManager;
     public QuestManager QuestManager { get => m_QuestManager; }
 
     private DialogueManager m_DialogueManager;
     public DialogueManager DialogueManager { get => m_DialogueManager; }
-    
+
     private AudioManager m_AudioManager;
     public AudioManager AudioManager { get => m_AudioManager; }
 
     private MenuManager m_MenuManager;
     public MenuManager MenuManager { get => m_MenuManager; }
+
+    private Fade m_Fade;
+    public Fade Fade { get => m_Fade; }
 
 
     // Start is called before the first frame update
@@ -32,12 +35,14 @@ public class GameManager : Singleton<GameManager>
         m_AudioManager = GetComponentInChildren<AudioManager>();
         m_QuestManager = GetComponentInChildren<QuestManager>();
         m_MenuManager = GetComponentInChildren<MenuManager>();
+        m_Fade = GetComponent<Fade>();
         m_EventManager = Factory.CreateEvenetManager();
     }
 
     private void Start()
     {
         instance.EventManager.Register(Constants.EVENT_END_LEVEL, LevelCompleted);
+        instance.EventManager.Register(Constants.EVENT_END_LEVEL, (param) => m_Fade.DoFadeIn());
     }
 
     /// <summary>
@@ -48,4 +53,6 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene((int)parameters[0]);
     }
+
+    public void Fading() => Debug.Log("");
 }

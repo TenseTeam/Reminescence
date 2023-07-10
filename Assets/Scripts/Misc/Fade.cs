@@ -7,14 +7,14 @@ public class Fade : MonoBehaviour
     public enum StartFade
     {
         None,
-        FadeIn,
-        FadeOut,
+        FadeIn, //from null to color
+        FadeOut, //from color to null
         FadeInFadeOut,
         FadeOutFadeIn
     }
 
     [Tooltip("Fade duration time in seconds"), Range(1, 100)]
-    public float FadeStartDuration = 1f;
+    public float FadeDuration = 1f;
     public Color FadeColor;
 
     [Tooltip("Fade on Start")]
@@ -27,27 +27,27 @@ public class Fade : MonoBehaviour
     public event Action OnFadeOutStart;
     public event Action OnFadeOutEnd;
 
-    public void Fading(StartFade choosedFade, float fadeDuration)
+    private void Start()
     {
-        if (choosedFade == StartFade.None)
+        if (FadeStart == StartFade.None)
             return;
 
-        switch (choosedFade)
+        switch (FadeStart)
         {
             case StartFade.FadeIn:
-                DoFadeIn(fadeDuration);
+                DoFadeIn(FadeDuration);
                 break;
 
             case StartFade.FadeOut:
-                DoFadeOut(fadeDuration);
+                DoFadeOut(FadeDuration);
                 break;
 
             case StartFade.FadeInFadeOut:
-                DoFadeInOut(fadeDuration);
+                DoFadeInOut(FadeDuration);
                 break;
 
             case StartFade.FadeOutFadeIn:
-                DoFadeOutIn(fadeDuration);
+                DoFadeOutIn(FadeDuration);
                 break;
         }
     }
@@ -62,12 +62,28 @@ public class Fade : MonoBehaviour
     }
 
     /// <summary>
+    /// Starts fade out effect.
+    /// </summary>
+    public void DoFadeOut()
+    {
+        DoFadeOut(FadeDuration);
+    }
+
+    /// <summary>
     /// Starts fade in effect.
     /// </summary>
     /// <param name="time">time in seconds.</param>
     public void DoFadeIn(float time)
     {
         StartCoroutine(FadeInRoutine(time));
+    }
+
+    /// <summary>
+    /// Starts fade in effect.
+    /// </summary>
+    public void DoFadeIn()
+    {
+        DoFadeIn(FadeDuration);
     }
 
     /// <summary>
@@ -80,12 +96,28 @@ public class Fade : MonoBehaviour
     }
 
     /// <summary>
+    /// Starts fade out followed by fade in.
+    /// </summary>
+    public void DoFadeOutIn()
+    {
+        DoFadeOutIn(FadeDuration);
+    }
+
+    /// <summary>
     /// Starts fade in followed by fade out.
     /// </summary>
     /// <param name="time">time in seconds.</param>
     public void DoFadeInOut(float time)
     {
         StartCoroutine(FadeInOutRoutine(time));
+    }
+
+    /// <summary>
+    /// Starts fade in followed by fade out.
+    /// </summary>
+    public void DoFadeInOut()
+    {
+        DoFadeInOut(FadeDuration);
     }
 
     /// <summary>
