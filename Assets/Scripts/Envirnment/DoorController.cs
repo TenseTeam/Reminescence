@@ -7,6 +7,8 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private int m_NextScene;
+    [SerializeField] private Sprite m_PartUpOpenDoor;
+    [SerializeField] private Sprite m_PartDownOpenDoor;
 
     private void Start()
     {
@@ -22,8 +24,8 @@ public class DoorController : MonoBehaviour
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         collider.gameObject.SetActive(false);
 
-        transform.GetChild(0).gameObject.SetActive(false);
-        transform.GetChild(1).gameObject.SetActive(false);
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = m_PartUpOpenDoor;
+        transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = m_PartDownOpenDoor;
     }
 
     /// <summary>
