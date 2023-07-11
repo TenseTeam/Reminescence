@@ -6,24 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/scn_Loops/scn_MainMenu2.unity
-    guid: 805a054ee7d26f14c99c1359c73ad9fc
+    path: Assets/Scenes/scn_Loops/scn_MainMenu1 1.unity
+    guid: 333d8586d2b451744b5719b5ae788739
   - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop1.unity
     guid: 22d8eb7d31359e248809e5ed8ab557f0
   - enabled: 1
+    path: Assets/Scenes/Memories/Memory1.unity
+    guid: edd44789bad05c248adac2c542b862e5
+  - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop2.unity
     guid: 9b84608eb941ffa49b80aadcb49650d3
+  - enabled: 1
+    path: Assets/Scenes/Memories/Memory 2.unity
+    guid: e6c6535f8b2b5b64d99f4f6bd33b98b0
   - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop3.unity
     guid: 8c526df087d1cb040a33976ffe941217
   - enabled: 1
+    path: Assets/Scenes/Memories/Memory 3.unity
+    guid: baa51797914454b41a0a1d3a43a251aa
+  - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop4.unity
     guid: 29527f9f16bc3c141a3a6e04fa4b858b
+  - enabled: 1
+    path: Assets/Scenes/Memories/Memory 4.unity
+    guid: b121aa0efca6f9e42ba90e1eb166932c
   - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop5.unity
     guid: bd3adeb1afbb45644ac1d19f6caa9aba
   - enabled: 1
+    path: Assets/Scenes/Memories/Memory 5.unity
+    guid: deea5bddce2ec8a4a9ff3c6c7163fda4
+  - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop6.unity
     guid: 49dcf70ff4c73cd41a4c38bd7cef9ad8
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Cutscene.unity
+    guid: d9a1cec8fafab2c429b288fdf4814a5e
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_MainMenu2.unity
+    guid: 805a054ee7d26f14c99c1359c73ad9fc
   m_configObjects: {}
