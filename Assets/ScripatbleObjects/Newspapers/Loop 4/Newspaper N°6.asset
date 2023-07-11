@@ -16,23 +16,17 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: January 3rd - 2011 California
-  Description: 'In Loving Memory: South Pasadena Mourns the Loss of Catherine, Beloved
-    Wife of Natan  South Pasadena''s community is enveloped in a profound sense of
-    grief as we bid farewell to Catherine, the beloved wife of Natan, who has left
-    an indelible mark on our hearts. After a decade-long battle against cancer, Catherine''s
-    courageous journey has come to an end, leaving behind a legacy of strength, love,
-    and unwavering determination. Catherine, known for her grace, compassion, and
-    unwavering spirit, touched the lives of many during her time in South Pasadena.
-    Her radiant smile, kind heart, and unwavering support for the community endeared
-    her to all who had the privilege of knowing her. From her involvement in charitable
-    initiatives to her genuine care for her neighbors, Catherine''s impact extended
-    far beyond her role as Natan''s wife. In the face of adversity, Catherine demonstrated
-    extraordinary resilience. Her battle with cancer served as a testament to her
-    unwavering determination and unwavering hope, inspiring all those who witnessed
-    her journey. Throughout the ups and downs, she faced each challenge with grace
-    and an unwavering spirit, becoming a source of inspiration for the community.
-    Natan, who stood by Catherine''s side throughout her battle, now finds himself
-    navigating the uncharted waters of grief. While his strength and resilience have
-    been admired by many, it is now our turn to offer comfort and support to him
-    during this difficult time. The community stands united, ready to extend a helping
-    hand and provide solace in any way possible. '
+  Description: 'South Pasadena''s community is enveloped in a profound sense of grief
+    as we bid farewell to Catherine, the beloved wife of Natan, who has left an indelible
+    mark on our hearts. After a decade-long battle against cancer, Catherine''s courageous
+    journey has come to an end, leaving behind a legacy of strength, love, and unwavering
+    determination. Catherine, known for her grace, compassion, and unwavering spirit,
+    touched the lives of many during her time in South Pasadena. Her radiant smile,
+    kind heart, and unwavering support for the community endeared her to all who
+    had the privilege of knowing her. From her involvement in charitable initiatives
+    to her genuine care for her neighbors, Catherine''s impact extended far beyond
+    her role as Natan''s wife. In the face of adversity, Catherine demonstrated extraordinary
+    resilience. Her battle with cancer served as a testament to her unwavering determination
+    and unwavering hope, inspiring all those who witnessed her journey. Throughout
+    the ups and downs, she faced each challenge with grace and an unwavering spirit,
+    becoming a source of inspiration for the community. '
