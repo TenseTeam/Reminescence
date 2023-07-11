@@ -376,7 +376,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c3572577f72f52d4b88587012f6416c0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.731
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13739,7 +13739,7 @@ Animator:
   m_GameObject: {fileID: 1468342934}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35170e945d926fb4c9f1288e6f242d48, type: 2}
+  m_Controller: {fileID: 9100000, guid: 68c22ed7d21115d408ee59ea3eeda524, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13817,7 +13817,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 685103755, guid: 5fa7b3a2792d7f044b5a1bd46dddeeee, type: 3}
+  m_Sprite: {fileID: 987323115, guid: e78cc96dc1d312a48b648efdd0a8ee6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17309,7 +17309,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999181223}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2fa26624a8c1f6743b49830dd0a25539, type: 3}
