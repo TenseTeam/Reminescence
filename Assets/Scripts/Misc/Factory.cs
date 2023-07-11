@@ -18,7 +18,7 @@ public static class Factory
         Material spriteMaterial = spriteRenderer.material;
 
         // Create a new material for the highlight effect
-        Material highlightMaterial = new Material(Shader.Find("Universal Render Pipeline/2D/Sprite-Lit-Default"));
+        Material highlightMaterial = new Material(Shader.Find("Sprites/Default"));
 
         // Create a new object with a SpriteRenderer component to display the highlight
         GameObject highlightObject = new GameObject("Highlight");

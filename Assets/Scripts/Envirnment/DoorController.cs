@@ -8,8 +8,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private int m_NextScene;
-    [SerializeField] private Sprite m_PartUpOpenDoor;
-    [SerializeField] private Sprite m_PartDownOpenDoor;
+
 
     private void Start()
     {
@@ -22,10 +21,10 @@ public class DoorController : MonoBehaviour
     /// <param name="parameters"></param>
     public void ThroughDoor(object[] parameters)
     {
-        GetComponent<BoxCollider2D>().gameObject.SetActive(false);
+        GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<AudioSource>().Play();
-        transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = m_PartUpOpenDoor;
-        transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = m_PartDownOpenDoor;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+        transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = false;
     }
 
     /// <summary>

@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scn_Loops/scn_Loop1.unity
     guid: 22d8eb7d31359e248809e5ed8ab557f0
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Loop2.unity
+    guid: 9b84608eb941ffa49b80aadcb49650d3
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Loop3.unity
+    guid: 8c526df087d1cb040a33976ffe941217
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Loop4.unity
+    guid: 29527f9f16bc3c141a3a6e04fa4b858b
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Loop5.unity
+    guid: bd3adeb1afbb45644ac1d19f6caa9aba
+  - enabled: 1
+    path: Assets/Scenes/scn_Loops/scn_Loop6.unity
+    guid: 49dcf70ff4c73cd41a4c38bd7cef9ad8
   m_configObjects: {}

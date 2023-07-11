@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44d0b44e5b861447b6d2b0dc9d2eadf, type: 3}
-  m_Name: "Fragment_N\xB01"
+  m_Script: {fileID: 11500000, guid: 26421372973fc164b805a814ae62f145, type: 3}
+  m_Name: Car
   m_EditorClassIdentifier: 
-  Type: 2
-  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
-  UiImage: {fileID: 21300000, guid: 95e13fa9bbbeeab4eb508e48bdef5934, type: 3}
+  Type: 0
+  AudioSFX: {fileID: 8300000, guid: 8f58a4af45385f048bc1d2505cb76ec0, type: 3}
+  Description: 
