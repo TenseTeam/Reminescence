@@ -37,9 +37,9 @@ public class GateController : InteractableItem
 
     private void ThroughGate()
     {
-        GetComponent<BoxCollider2D>().enabled = false; 
-        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false; 
+        GetComponent<BoxCollider2D>().enabled = false;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = false;
-
+        GameManager.instance.UIManager.SetActiveInteractIcon(false);
     }
 }
