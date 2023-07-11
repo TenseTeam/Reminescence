@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f9ce4b46c51d04c980e7f3b064b803, type: 3}
+  m_Name: "Letter N\xB04"
+  m_EditorClassIdentifier: 
+  Type: 1
+  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
+  UiImage: {fileID: -499789638, guid: 6b45e2261f8780247985c6cd5a527751, type: 3}
+  Title: 
+  Description: 'Dear Natan, We hope this letter finds you well. We wanted to reach
+    out to express our concern about your recent withdrawal from the community and
+    your seclusion inside your house. We have noticed a significant change in your
+    behavior, and we genuinely care about your well-being. Please know that we are
+    here to offer our support and lend a listening ear whenever you are ready to
+    reach out. You are not alone, and we want to remind you that our community cares
+    deeply for you. We understand that grief and loss can be isolating, but we want
+    you to know that we are here to walk this journey with you. We believe in the
+    strength of our community and the power of connection. Please consider allowing
+    us to be there for you, providing the support and care you may need during this
+    difficult time. You are not forgotten, and we are ready to extend a helping hand
+    whenever you are ready to reach out. With heartfelt concern, Your Neighbors. '

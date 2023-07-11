@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f9ce4b46c51d04c980e7f3b064b803, type: 3}
+  m_Name: "Newspaper N\xB07"
+  m_EditorClassIdentifier: 
+  Type: 1
+  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
+  UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
+  Title: February 3rd - 2012 California
+  Description: 'South Pasadena''s bustling community finds itself shrouded in an
+    aura of mystery as Natan, the once-vibrant businessman who brought transformation
+    to our city, has retreated from public life, becoming a reclusive figure within
+    the confines of his home. Over the past five years, Natan has gradually faded
+    from the public eye, leaving the community curious and concerned about his well-being.
+    Once an active and influential presence, Natan''s absence has been deeply felt
+    throughout South Pasadena. The man who once spearheaded initiatives, led philanthropic
+    endeavors, and inspired countless individuals has become like a phantom, rarely
+    seen outside the walls of his residence. This unexpected withdrawal has left
+    friends, neighbors, and acquaintances wondering what lies behind this self-imposed
+    seclusion. '

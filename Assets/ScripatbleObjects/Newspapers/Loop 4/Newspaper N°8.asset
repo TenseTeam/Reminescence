@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f9ce4b46c51d04c980e7f3b064b803, type: 3}
+  m_Name: "Newspaper N\xB08"
+  m_EditorClassIdentifier: 
+  Type: 1
+  AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
+  UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
+  Title: February 9th - 2014 California
+  Description: 'South Pasadena finds itself at a critical juncture as the nation
+    grapples with an unprecedented economic crisis. The once-stable economic landscape
+    has been shaken by a series of unforeseen events, plunging the country into a
+    period of uncertainty and testing the resilience of communities, including our
+    own. In the midst of this crisis, Natan, the reclusive figure who captured the
+    community''s imagination, continues to face his own struggles. After the passing
+    of his beloved wife Catherine, Natan''s financial stability has been significantly
+    impacted. The loss of Catherine not only left a void in his heart but also had
+    far-reaching consequences for his personal finances. The economic downturn has
+    further exacerbated Natan''s financial challenges. The investments and ventures
+    that once brought prosperity have been battered by the crisis, resulting in significant
+    losses. The once bustling empire that Natan built now stands on uncertain ground,
+    with diminished resources and a dwindling financial cushion. '
