@@ -18,7 +18,15 @@ public class CutsceneManager : MonoBehaviour
     {
         if (m_PlayableDirector.state == PlayState.Paused)
         {
-            SceneManager.LoadScene(m_NextScene);
+            GetComponent<Fade>().DoFadeIn();
+            StartCoroutine(Load());
         }
+    }
+
+
+    private IEnumerator Load()
+    {
+        yield return new WaitForSeconds(GetComponent<Fade>().FadeDuration);
+        SceneManager.LoadScene(m_NextScene);
     }
 }
