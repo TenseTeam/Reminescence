@@ -9,12 +9,16 @@ public class UIManager : MonoBehaviour
     [Header("Interaction System")]
     [SerializeField] private GameObject m_ItemInteraction;
     [SerializeField] private GameObject m_ItemFrame;
+    [SerializeField] private GameObject m_ContinueBtn;
     [SerializeField] private Image m_ItemInteractionImage;
     [SerializeField] private TextMeshProUGUI m_ItemInteractionDescription; 
     [SerializeField] private TextMeshProUGUI m_ItemInteractionTitle; 
     [SerializeField] private GameObject m_InteractionIcon;
     [SerializeField] private KeyCode m_HideInteractionKey;
     [SerializeField] private KeyCode m_ShowHidePauseMenuKey;
+
+    private NewsPaperItemData m_ActualItem;
+    private int m_DescriptionPartIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,20 +64,34 @@ public class UIManager : MonoBehaviour
 
     public void ShowInteractableItem(object[] param)
     {
+        
         switch (((ItemBaseData)param[0]).Type)
         {
             case ItemType.Furniture:
                 m_ItemInteractionImage.gameObject.SetActive(false);
                 m_ItemInteractionDescription.gameObject.SetActive(true);
+                m_ItemInteractionDescription.text = ((FornitureiteamData)param[0]).Description;
                 m_ItemInteractionTitle.gameObject.SetActive(false);
                 m_ItemFrame.gameObject.SetActive(false);
-                m_ItemInteractionDescription.text = ((FornitureiteamData)param[0]).Description;
+                m_ContinueBtn.gameObject.SetActive(false);
                 break;
             case ItemType.NewsPaper:
                 m_ItemInteractionImage.gameObject.SetActive(true);
                 m_ItemInteractionImage.sprite = ((NewsPaperItemData)param[0]).UiImage;
                 m_ItemInteractionDescription.gameObject.SetActive(true);
-                m_ItemInteractionDescription.text = ((NewsPaperItemData)param[0]).Description;
+                m_ItemInteractionDescription.text = ((NewsPaperItemData)param[0]).DescriptionParts[0];
+
+                if(((NewsPaperItemData)param[0]).DescriptionParts.Length > 1)
+                {
+                    m_DescriptionPartIndex = 1;
+                    m_ActualItem = (NewsPaperItemData)param[0];
+                    m_ContinueBtn.gameObject.SetActive(true);
+                }
+                else
+                {
+                    m_ContinueBtn.gameObject.SetActive(false);
+                }
+
                 m_ItemInteractionTitle.gameObject.SetActive(true);
                 m_ItemInteractionTitle.text = ((NewsPaperItemData)param[0]).Title;
                 m_ItemFrame.gameObject.SetActive(true);
@@ -84,6 +102,7 @@ public class UIManager : MonoBehaviour
                 m_ItemInteractionDescription.gameObject.SetActive(false);
                 m_ItemInteractionTitle.gameObject.SetActive(false);
                 m_ItemFrame.gameObject.SetActive(false);
+                m_ContinueBtn.gameObject.SetActive(false);
                 break;
         }
         SetActiveObject(m_ItemInteraction, true);
@@ -93,5 +112,14 @@ public class UIManager : MonoBehaviour
     public void SetActiveInteractIcon(bool value)
     {
         SetActiveObject(m_InteractionIcon, value);
+    }
+
+    public void ContueDescription()
+    {
+        m_ItemInteractionDescription.text = m_ActualItem.DescriptionParts[m_DescriptionPartIndex];
+        if (m_DescriptionPartIndex == m_ActualItem.DescriptionParts.Length - 1)
+            m_ContinueBtn.gameObject.SetActive(false);
+        else
+            m_DescriptionPartIndex++;
     }
 }

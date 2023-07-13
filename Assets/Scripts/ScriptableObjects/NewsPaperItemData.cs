@@ -6,5 +6,5 @@ using UnityEngine;
 public class NewsPaperItemData : UiItemData
 {
     public string Title;
-    public string Description;
+    public string[] DescriptionParts;
 }
