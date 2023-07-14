@@ -9,7 +9,7 @@ public class VideoPlayerController : MonoBehaviour
     [SerializeField] private int m_NextScene;
     void Update()
     {
-        if (!GetComponent<VideoPlayer>().isPlaying)
+        if (GetComponent<VideoPlayer>().time == GetComponent<VideoPlayer>().clip.length)
         {
             GetComponent<Fade>().DoFadeIn();
             StartCoroutine(Load());
