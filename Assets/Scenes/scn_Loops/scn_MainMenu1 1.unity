@@ -2769,9 +2769,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Design\r\n\r\nLorenzo Rocco:  Creative Director,, Lead Narrative
-    Designer,\r\nCarlo De Michele:  Game Director , Project Manager,  UI/UX Designer\r\nRiccardo
-    Volpi: Lead Level Designer, Associate Project Manager\r\n\r\n\r\nProgramming\r\n\r\nGabriel
+  m_text: "Game Design\r\n\r\nLorenzo Rocco:  Creative Director, Lead Narrative Designer,\r\nCarlo
+    De Michele:  Game Director , Project Manager,  UI/UX Designer\r\nRiccardo Volpi:
+    Lead Level Designer, Associate Project Manager\r\n\r\n\r\nProgramming\r\n\r\nGabriel
     Moratelli: Lead Programmer, Associate Project Manager\r\n\r\nGame Concept Art\r\n\r\nLaura
     Luperto: Art Director, Character Concept Artist\r\nFrancesca Argiolas: Lead Concept
     Artist\r\nSofia Fradegrada: Environment Artist, Prop Artist\r\nGiulia Timeo: 

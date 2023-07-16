@@ -48,7 +48,8 @@ public class MenuManager : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
     }
 
     #region audio
