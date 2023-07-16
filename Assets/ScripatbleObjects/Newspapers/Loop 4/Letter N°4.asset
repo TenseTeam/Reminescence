@@ -15,16 +15,14 @@ MonoBehaviour:
   Type: 1
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: -499789638, guid: 6b45e2261f8780247985c6cd5a527751, type: 3}
-  Title: 
-  Description: 'Dear Natan, We hope this letter finds you well. We wanted to reach
-    out to express our concern about your recent withdrawal from the community and
-    your seclusion inside your house. We have noticed a significant change in your
-    behavior, and we genuinely care about your well-being. Please know that we are
-    here to offer our support and lend a listening ear whenever you are ready to
-    reach out. You are not alone, and we want to remind you that our community cares
-    deeply for you. We understand that grief and loss can be isolating, but we want
-    you to know that we are here to walk this journey with you. We believe in the
-    strength of our community and the power of connection. Please consider allowing
-    us to be there for you, providing the support and care you may need during this
-    difficult time. You are not forgotten, and we are ready to extend a helping hand
-    whenever you are ready to reach out. With heartfelt concern, Your Neighbors. '
+  Title: Dear Natan.
+  DescriptionParts:
+  - 'Our hearts ache with profound sorrow as we received the news of Catherine''s
+    passing. We share in your grief and extend our deepest sympathies during this
+    incredibly challenging time. The loss of Catherine has left an irreplaceable
+    void in our community, and we offer our unwavering support as you navigate through
+    this journey of mourning. '
+  - 'As you find solace in cherished memories and the love you shared, please know
+    that we are here for you. Lean on us for strength, comfort, and understanding. '
+  - 'With heartfelt condolences, John and Lisa Thompson Sarah Johnson David and Emily
+    Martinez '

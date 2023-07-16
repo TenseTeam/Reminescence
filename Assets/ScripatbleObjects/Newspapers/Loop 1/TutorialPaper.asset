@@ -17,5 +17,7 @@ MonoBehaviour:
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: TUTORIAL
   DescriptionParts:
-  - PIPPO FRANCO
-  - FRANCO PIPPO
+  - Welcome in  Reminiscence. To progress the game you need to interact with every
+    Newspaper, Picture, Furniture and letters scattered around the place. When the
+    objective is completed you will hear a door unlocking in the upper floor. Have
+    fun.

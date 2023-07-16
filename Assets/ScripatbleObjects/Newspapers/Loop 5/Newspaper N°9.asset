@@ -16,16 +16,19 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: November 19th - 2025 California
-  Description: 'In the heart of South Pasadena''s prestigious suburb, a once-majestic
-    house now stands as a decaying reminder of a bygone era. The deteriorating state
-    of Natan''s residence has become a cause for concern and frustration among the
-    residents of the upscale neighborhood, tarnishing the image of their esteemed
-    community. Nestled among meticulously manicured lawns and elegant mansions, Natan''s
-    house, once a symbol of opulence and grandeur, now presents a stark contrast
-    to its surroundings. The passage of time has taken its toll, leaving the structure
-    in a state of disrepair. Broken windows, crumbling facades, and overgrown vegetation
-    now define the property, eroding the allure of the neighborhood. The residents,
-    who pride themselves on the meticulously maintained aesthetic of their community,
-    are increasingly vocal about the eyesore in their midst. They lament the decay
-    of what was once a prominent landmark, expressing their frustration at the gradual
-    decline of the property and its impact on the overall appeal of the neighborhood. '
+  DescriptionParts:
+  - 'Decaying Remnants: Natan''s House a Thorn in the Side of a Prestigious Suburb. '
+  - 'In the heart of South Pasadena''s prestigious suburb, a once-majestic house
+    now stands as a decaying reminder of a bygone era. The deteriorating state of
+    Natan''s residence has become a cause for concern and frustration among the residents
+    of the upscale neighborhood, tarnishing the image of their esteemed community. '
+  - 'Nestled among meticulously manicured lawns and elegant mansions, Natan''s house,
+    once a symbol of opulence and grandeur, now presents a stark contrast to its
+    surroundings. The passage of time has taken its toll, leaving the structure in
+    a state of disrepair. Broken windows, crumbling facades, and overgrown vegetation
+    now define the property, eroding the allure of the neighborhood. '
+  - 'The residents, who pride themselves on the meticulously maintained aesthetic
+    of their community, are increasingly vocal about the eyesore in their midst.
+    They lament the decay of what was once a prominent landmark, expressing their
+    frustration at the gradual decline of the property and its impact on the overall
+    appeal of the neighborhood.  '

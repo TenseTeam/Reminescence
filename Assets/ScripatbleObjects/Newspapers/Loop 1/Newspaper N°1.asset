@@ -16,4 +16,22 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: 'April 12th - 1981 California '
-  DescriptionParts: []
+  DescriptionParts:
+  - 'Bringing Business Brilliance to South Pasadena: Natan''s Arrival Marks a New
+    Chapter.  '
+  - South Pasadena, a charming city known for its vibrant community and cultural
+    heritage, is about to welcome a new resident who promises to bring business brilliance
+    and entrepreneurial spirit to its streets. Natan, a renowned businessman and
+    industry leader, has chosen South Pasadena as the location for his latest venture,
+    generating excitement and anticipation within the local community.
+  - 'Natan''s decision to move to South Pasadena is driven by his admiration for
+    the city''s unique charm, close-knit community, and thriving business environment.
+    Having achieved remarkable success in his previous endeavors, Natan aims to contribute
+    to the growth and prosperity of the local economy while fostering innovation
+    and collaboration. '
+  - 'With a wealth of experience in various industries, Natan is poised to make a
+    significant impact in South Pasadena. His reputation as a strategic thinker and
+    visionary leader precedes him, inspiring confidence among investors, entrepreneurs,
+    and residents alike. Natan''s arrival is expected to attract attention from both
+    local businesses and national players, as his track record of success piques
+    curiosity and raises expectations. '
