@@ -16,18 +16,20 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: March 22nd - 2001 California
-  Description: 'Strength in Adversity: Natan''s Wife Battles Cancer with Courage
-    and Community Support.  South Pasadena is no stranger to stories of resilience
-    and unity, and today, we stand together once again as we rally around a beloved
-    member of our community. Catherine, the accomplished wife of esteemed businessman
-    Natan, has been diagnosed with cancer, embarking on a challenging journey that
-    will require unwavering strength and support. Catherine, a pillar of grace and
-    compassion, has touched the lives of many in South Pasadena over the years. Her
-    dedication to her profession, her commitment to social causes, and her warm presence
-    at community events have earned her a special place in the hearts of residents.
-    Now, as she faces this difficult battle, the community stands united, offering
-    solace, encouragement, and a helping hand. News of Catherine''s diagnosis has
-    reverberated throughout South Pasadena, evoking an outpouring of support from
-    friends, neighbors, and acquaintances. The city''s renowned spirit of unity has
-    once again come to the forefront, as individuals and organizations rally together
-    to offer their assistance in any way they can. '
+  DescriptionParts:
+  - 'Strength in Adversity: Natan''s Wife Battles Cancer with Courage and Community
+    Support. '
+  - 'South Pasadena is no stranger to stories of resilience and unity, and today,
+    we stand together once again as we rally around a beloved member of our community.
+    Catherine, the accomplished wife of esteemed businessman Natan, has been diagnosed
+    with cancer, embarking on a challenging journey that will require unwavering
+    strength and support. '
+  - 'Catherine, a pillar of grace and compassion, has touched the lives of many in
+    South Pasadena over the years. Her dedication to her profession, her commitment
+    to social causes, and her warm presence at community events have earned her a
+    special place in the hearts of residents. Now, as she faces this difficult battle,
+    the community stands united, offering solace, encouragement, and a helping hand. '
+  - 'News of Catherine''s diagnosis has reverberated throughout South Pasadena, evoking
+    an outpouring of support from friends, neighbors, and acquaintances. The city''s
+    renowned spirit of unity has once again come to the forefront, as individuals
+    and organizations rally together to offer their assistance in any way they can. '

@@ -16,16 +16,19 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: February 9th - 2014 California
-  Description: 'South Pasadena finds itself at a critical juncture as the nation
-    grapples with an unprecedented economic crisis. The once-stable economic landscape
-    has been shaken by a series of unforeseen events, plunging the country into a
-    period of uncertainty and testing the resilience of communities, including our
-    own. In the midst of this crisis, Natan, the reclusive figure who captured the
-    community''s imagination, continues to face his own struggles. After the passing
-    of his beloved wife Catherine, Natan''s financial stability has been significantly
-    impacted. The loss of Catherine not only left a void in his heart but also had
-    far-reaching consequences for his personal finances. The economic downturn has
-    further exacerbated Natan''s financial challenges. The investments and ventures
-    that once brought prosperity have been battered by the crisis, resulting in significant
-    losses. The once bustling empire that Natan built now stands on uncertain ground,
-    with diminished resources and a dwindling financial cushion. '
+  DescriptionParts:
+  - 'Economic Crisis Looms: South Pasadena Strives to Overcome Unprecedented Challenges.'
+  - 'South Pasadena finds itself at a critical juncture as the nation grapples with
+    an unprecedented economic crisis. The once-stable economic landscape has been
+    shaken by a series of unforeseen events, plunging the country into a period of
+    uncertainty and testing the resilience of communities, including our own. '
+  - 'In the midst of this crisis, Natan, the reclusive figure who captured the community''s
+    imagination, continues to face his own struggles. After the passing of his beloved
+    wife Catherine, Natan''s financial stability has been significantly impacted.
+    The loss of Catherine not only left a void in his heart but also had far-reaching
+    consequences for his personal finances. '
+  - 'The economic downturn has further exacerbated Natan''s financial challenges.
+    The investments and ventures that once brought prosperity have been battered
+    by the crisis, resulting in significant losses. The once bustling empire that
+    Natan built now stands on uncertain ground, with diminished resources and a dwindling
+    financial cushion. '

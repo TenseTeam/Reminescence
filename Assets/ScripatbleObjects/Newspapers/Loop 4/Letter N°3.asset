@@ -15,11 +15,13 @@ MonoBehaviour:
   Type: 1
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: -499789638, guid: 6b45e2261f8780247985c6cd5a527751, type: 3}
-  Title: 
-  Description: 'Dear Natan, Our hearts ache with profound sorrow as we received the
-    news of Catherine''s passing. We share in your grief and extend our deepest sympathies
-    during this incredibly challenging time. The loss of Catherine has left an irreplaceable
-    void in our community, and we offer our unwavering support as you navigate through
-    this journey of mourning. As you find solace in cherished memories and the love
-    you shared, please know that we are here for you. Lean on us for strength, comfort,
-    and understanding. With heartfelt condolences, John and Lisa Thompson Sarah Johnson. '
+  Title: Dear Natan.
+  DescriptionParts:
+  - 'We were deeply saddened to hear of Catherine''s passing. Please accept our heartfelt
+    condolences during this difficult time. Catherine''s warm smile, kind heart,
+    and unwavering spirit will be dearly missed in our community. '
+  - 'Our thoughts and prayers are with you as you navigate this journey of grief.
+    Lean on us for support, as we honor Catherine''s life and offer our unwavering
+    presence. You are not alone in this. '
+  - 'With deepest sympathy, Your South Pasadena Community Michael and Michelle Adams
+    Robert and Karen Turner Andrew and Jessica Lee '

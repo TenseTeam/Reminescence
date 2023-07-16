@@ -15,12 +15,25 @@ MonoBehaviour:
   Type: 1
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: -499789638, guid: 6b45e2261f8780247985c6cd5a527751, type: 3}
-  Title: 
-  Description: 'Dear Natan, We were deeply saddened to hear of Catherine''s passing.
-    Please accept our heartfelt condolences during this difficult time. Catherine''s
-    warm smile, kind heart, and unwavering spirit will be dearly missed in our community.
-    Our thoughts and prayers are with you as you navigate this journey of grief.
-    Lean on us for support, as we honor Catherine''s life and offer our unwavering
-    presence. You are not alone in this. With deepest sympathy, Your South Pasadena
-    Community Michael and Michelle Adams Robert and Karen Turner Andrew and Jessica
-    Lee. '
+  Title: Dear Natan and Catherine.
+  DescriptionParts:
+  - 'The news of Catherine''s illness has brought a profound sense of sadness to
+    our hearts. We want you to know that you are in our thoughts and prayers as you
+    navigate this difficult journey together. You have always been an integral part
+    of our community, and we stand by you now more than ever. '
+  - 'During times like these, the power of love, support, and encouragement becomes
+    even more evident. We want to remind you that you are surrounded by a network
+    of friends, neighbors, and loved ones who deeply care about you both. Your strength
+    and resilience are an inspiration to us all, and we have no doubt that you will
+    face this challenge with unwavering determination. '
+  - 'Please take solace in knowing that we are here to lend a helping hand, a listening
+    ear, or simply a shoulder to lean on. We will walk alongside you on this journey,
+    providing comfort, encouragement, and support whenever you need it. Together,
+    we will face the uncertainties and difficulties, drawing strength from the bond
+    we share as a community. '
+  - 'Catherine, Natan, please remember that hope is a powerful force, and miracles
+    do happen. Our collective prayers and positive thoughts are with you, shining
+    a light of healing and strength. You are not alone in this fight, and together,
+    we will overcome the obstacles that lie ahead. '
+  - 'With heartfelt compassion, Your South Pasadena Community. Michael and Michelle
+    Adams Robert and Karen Turner Andrew and Jessica Lee '

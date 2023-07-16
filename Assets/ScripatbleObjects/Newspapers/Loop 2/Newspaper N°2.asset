@@ -16,18 +16,22 @@ MonoBehaviour:
   AudioSFX: {fileID: 8300000, guid: c3832d8f6ed79b046b55e5093143af06, type: 3}
   UiImage: {fileID: 21300000, guid: 60b03f257968b8c4280fa926f75957a5, type: 3}
   Title: May 5th - 1991 California
-  Description: 'Celebrating a Decade of Excellence: Natan''s Transformative Journey
-    in South Pasadena.  A decade has passed since the arrival of Natan, the visionary
-    businessman who brought his entrepreneurial spirit and business brilliance to
-    the vibrant city of South Pasadena. As the community reflects on the remarkable
-    transformation witnessed over the past ten years, it becomes evident that Natan''s
-    impact has been nothing short of extraordinary. Since setting foot in South Pasadena,
-    Natan has proven himself to be a catalyst for growth and innovation. Through
-    his ventures and strategic collaborations, he has revitalized the local economy,
-    creating new job opportunities and fostering an environment conducive to business
-    development. The city''s skyline has transformed, with numerous successful startups
-    and thriving businesses now calling South Pasadena home. Beyond his own business
-    ventures, Natan''s commitment to nurturing the entrepreneurial ecosystem has
-    been unwavering. He has actively supported aspiring entrepreneurs and startups,
-    providing mentorship, resources, and access to capital. As a result, South Pasadena
-    has become known as a hub of innovation, attracting talent from near and far. '
+  DescriptionParts:
+  - 'Celebrating a Decade of Excellence: Natan''s Transformative Journey in South
+    Pasadena. '
+  - A decade has passed since the arrival of Natan, the visionary businessman who
+    brought his entrepreneurial spirit and business brilliance to the vibrant city
+    of South Pasadena. As the community reflects on the remarkable transformation
+    witnessed over the past ten years, it becomes evident that Natan's impact has
+    been nothing short of extraordinary.
+  - 'Since setting foot in South Pasadena, Natan has proven himself to be a catalyst
+    for growth and innovation. Through his ventures and strategic collaborations,
+    he has revitalized the local economy, creating new job opportunities and fostering
+    an environment conducive to business development. The city''s skyline has transformed,
+    with numerous successful startups and thriving businesses now calling South Pasadena
+    home. '
+  - Beyond his own business ventures, Natan's commitment to nurturing the entrepreneurial
+    ecosystem has been unwavering. He has actively supported aspiring entrepreneurs
+    and startups, providing mentorship, resources, and access to capital. As a result,
+    South Pasadena has become known as a hub of innovation, attracting talent from
+    near and far.
